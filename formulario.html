@@ -4,26 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <h1>FROMULARIO SENA V1</h1>
+  <h2>GRACIAS POR DEJAR SUS DATOS</h2>
 
+  <form id="surbery-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Please enter your name" required />
 
-    <label for="name">   Name:</label><br>
-    <input type="text" id="name" name="name" placeholder="Porfavor ingresa tu nombre"><br>
-    <label for="email">Email:</label><br>   
-    
-    <input type="email" id="email" name="email" placeholder="Porfavor ingresa tu email"><br>
-    <label for="age">Age:</label><br>
-    <input type="number" id="age" name="age" placeholder="Porfavor ingresa tu edad"><br>
-    <label for="options">Choose an option:</label><br>
-    <select id="options" name="options">
-    <option value="">¿Planeas comprar un coche nuevo en los próximos 5 años?</option>
-    <option value="si">Sí</option>
-    <option value="no">No</option>
-    <option value="no_se">No sé</option>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Please enter your email" required />
+
+    <label for="age">Age</label>
+    <input type="number" id="age" placeholder="Please enter your age" required />
+
+    <label for="option">Choose an option</label>
+    <select id="option">
+      <option>Select One Option</option>
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
     </select>
 
+    <label>Do you plan to buy a new car in the next 5 years?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="plan_car" /> Yes</label>
+      <label><input type="radio" name="plan_car" /> No</label>
+      <label><input type="radio" name="plan_car" /> Maybe</label>
+    </div>
+
+    <label for="car-brand">What is your favorite car brand?</label>
+    <select id="car-brand">
+      <option>Select One Option</option>
+      <option>Toyota</option>
+      <option>Ford</option>
+      <option>Chevrolet</option>
+      <option>Hyundai</option>
+    </select>
+
+    <label>What type of means of transportation do you own?</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" /> Car</label>
+      <label><input type="checkbox" /> Boat</label>
+      <label><input type="checkbox" /> Bicycle</label>
+      <label><input type="checkbox" /> Motorcycle</label>
+      <label><input type="checkbox" /> Plane</label>
+      <label><input type="checkbox" /> Bike</label>
+    </div>
+
+    <label for="comments">Any comments or suggestions?</label>
+    <textarea id="comments" placeholder="Please enter your comments"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+
+<div id="modal-success" class="modal hidden">
+    <div class="modal-content">
+            <h2>¡Datos enviados con éxito!</h2>
+            <button id="modal-close">Cerrar</button>
+    </div>
+</div>
     
 </body>
+<script type="module" src="main.js"></script>
 </html>
